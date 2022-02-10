@@ -1,0 +1,94 @@
+PART 1: SWAPI
+
+. height: 202
+"https://swapi.dev/api/people/4/"
+
+2. Population: 2000000000
+"https://swapi.dev/api/planets/2/"
+
+3. Manufacuter: "Gallofree Yards, Inc."
+https://swapi.dev/api/starships/17/
+
+4. C3PO: 
+Species: Droid and People
+https://swapi.dev/api/people/2/
+https://swapi.dev/api/species/2/
+
+5. Obi-Wan Kenobi:
+
+"https://swapi.dev/api/films/1/",
+"https://swapi.dev/api/films/2/",
+"https://swapi.dev/api/films/3/",
+"https://swapi.dev/api/films/4/",
+"https://swapi.dev/api/films/5/",
+"https://swapi.dev/api/films/6/"
+
+6. https://swapi.dev/api/starships/?search=Millennium
+
+PART 2: 
+
+
+1. Check if the POST request accept params, queries, and/or a body. Which one(s) and what information is it expecting to be sent?
+
+* POST request accepting body
+* expecting text
+
+2. What data type does the GET request return?
+
+
+* An array of all posts
+
+
+3. What would the URL look like for deleting the post with the id 555? (This post does not exist anymore, but the syntax is the same for existing posts, )
+
+
+* practiceapi.devmountain.com/api/posts/555
+
+
+4.List the possible response codes from the GET request at ‘/posts/filter’
+
+* 200 & 409
+
+5. Create a post whose text is your name, record the URL and body here:
+
+* URL: https://practiceapi.devmountain.com/api/posts
+
+* Body: 
+{
+  "text": "Josue Arredondo was here."
+}
+
+
+
+
+6. What would the URL and body object be to update the post you just made to contain your faovrite color instead of your name?
+
+* https://practiceapi.devmountain.com/api/posts?id=511
+
+* BODY: 
+{
+  "text": "Yoda Green"
+}
+
+
+7. What is the URL to get posts that contain the text “blue”?
+
+* https://practiceapi.devmountain.com/api/posts/filter?text=blue
+
+
+8. Make a request to GET all the posts. What are the content type and charset of the response? (Hint: look on the Headers)
+
+* content type: application/json
+* charset: utf-8 
+
+
+9. What would cause a PUT request to return a 409 status?
+
+* not having query id or body text
+* req.query.id or re.body.text
+
+
+10. What happens if you try to send a query in the GET request URL? Why do you get that response?
+
+* It sends us all of the posts
+* This is because there are no parameters required for the /post GET request.
